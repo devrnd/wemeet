@@ -1,3 +1,7 @@
 .modal-backdrop{
     z-index: 999;
 }
+
+.nowrap{
+    white-space: nowrap;
+}
