@@ -37,3 +37,7 @@ html {
 .main-header-area.sticky .logo-img{
     visibility: visible;
 }
+
+.header-area .main-header-area .logo-img a:hover {
+    color: #0181F5;
+}
