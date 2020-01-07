@@ -35,7 +35,7 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "Komm schon, du hast einen Namen, nicht wahr?",
+                    required: "Bitte geben Sie Ihren Namen an",
                     minlength: "Ihr Name muss aus mindestens 2 Zeichen bestehen"
                 },
                 subject: {
@@ -56,6 +56,7 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
+                // console.log($(form))
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),

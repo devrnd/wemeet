@@ -587,6 +587,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW"></div>
                         <div class="form-group mt-3">
                             <button type="submit" class="button button-contactForm boxed-btn">Senden</button>
                         </div>
@@ -697,7 +698,6 @@
 
 
     <!-- Modal -->
-
     <div class="modal fade" id="imprintModal" tabindex="-1" role="dialog" aria-labelledby="imprintModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -762,7 +762,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog" aria-labelledby="privacyModalTitle" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -916,7 +915,44 @@
         </div>
     </div>
 
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successTitle">Erfolgreich</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ihre Nachricht wurde gesendet</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="errorTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errorTitle">Fehler</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Etwas ist schief gegangen</p>
+                    <p>Bitte versuchen Sie es später noch einmal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -939,6 +975,14 @@
     <script src="js/plugins.js"></script>
 
     <!--contact js-->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW', {action: 'homepage'}).then(function(token) {
+            ...
+            });
+        });
+    </script>
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.form.js"></script>
