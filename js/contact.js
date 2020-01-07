@@ -47,7 +47,8 @@ $(document).ready(function(){
                     minlength: "Ihre Nummer muss aus mindestens 5 Zeichen bestehen"
                 },
                 email: {
-                    required: "Keine E-Mail, keine Nachricht"
+                    required: "Keine E-Mail, keine Nachricht",
+                    email: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
                 },
                 message: {
                     required: "ähm ... ja, Sie müssen etwas schreiben, um dieses Formular zu senden.",
