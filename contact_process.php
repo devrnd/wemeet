@@ -1,15 +1,21 @@
 <?php
 if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
 	$secret = '6Lc1I80UAAAAAI5eznsQcoDSblME4NVmEaXHnmVO';
-	$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+	$url = 'https://www.google.com/recaptcha/api/siteverify?' . http_build_query([
+		'secret' => $secret,
+		'response' => $_POST['g-recaptcha-response'],
+		'remoteip' => $_SERVER['REMOTE_ADDR'],
+	]);
+	$verifyResponse = file_get_contents($url);
+	// $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
 	$responseData = json_decode($verifyResponse);
 	if ($responseData->success) {
 		$to = "info@hausarzt-praxis-köln.de";
-		$from = $_REQUEST['email'];
-		$name = $_REQUEST['name'];
-		$csubject = $_REQUEST['subject'];
-		$number = $_REQUEST['number'];
-		$cmessage = $_REQUEST['message'];
+		$from = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
+		$name = filter_var($_REQUEST['name'], FILTER_SANITIZE_STRING);
+		$csubject = filter_var($_REQUEST['subject'], FILTER_SANITIZE_STRING);
+		$number = filter_var($_REQUEST['number'], FILTER_SANITIZE_STRING);
+		$cmessage = filter_var($_REQUEST['message'], FILTER_SANITIZE_STRING);
 
 		$headers = "From: " . $from . "\r\n";
 		$headers .= "Reply-To: " . $from . "\r\n";
