@@ -56,29 +56,36 @@ $(document).ready(function(){
                 }
             },
             submitHandler: function(form) {
-                // console.log($(form))
-                $(form).ajaxSubmit({
-                    type:"POST",
-                    data: $(form).serialize(),
-                    url:"contact_process.php",
-                    success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
-                        $('#contactForm').fadeTo( "slow", 1, function() {
-                            $(this).find(':input').attr('disabled', 'disabled');
-                            $(this).find('label').css('cursor','default');
-                            $('#success').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#success').modal('show');
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW', { action: 'send_email' }).then(function (token) {
+                        // add token to form
+                        let form = $(form)
+                        form.prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
+                        form.ajaxSubmit({
+                            type:"POST",
+                            data: $(form).serialize(),
+                            url:"contact_process.php",
+                            success: function() {
+                                $('#contactForm :input').attr('disabled', 'disabled');
+                                $('#contactForm').fadeTo( "slow", 1, function() {
+                                    $(this).find(':input').attr('disabled', 'disabled');
+                                    $(this).find('label').css('cursor','default');
+                                    $('#success').fadeIn()
+                                    $('.modal').modal('hide');
+                                    $('#success').modal('show');
+                                })
+                            },
+                            error: function() {
+                                $('#contactForm').fadeTo( "slow", 1, function() {
+                                    $('#error').fadeIn()
+                                    $('.modal').modal('hide');
+                                    $('#error').modal('show');
+                                })
+                            }
                         })
-                    },
-                    error: function() {
-                        $('#contactForm').fadeTo( "slow", 1, function() {
-                            $('#error').fadeIn()
-                            $('.modal').modal('hide');
-		                	$('#error').modal('show');
-                        })
-                    }
-                })
+                    });
+                });
+                
             }
         })
     })

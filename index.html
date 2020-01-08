@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/custom.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW"></script>
 </head>
 
 <body>
@@ -563,7 +565,7 @@
                     <h2 class="contact-title">Nehmen Sie Kontakt mit uns auf</h2>
                 </div>
                 <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <form class="form-contact contact_form" action="index.php" method="post" id="contactForm" novalidate="novalidate">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
@@ -587,7 +589,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW"></div>
                         <div class="form-group mt-3">
                             <button type="submit" class="button button-contactForm boxed-btn">Senden</button>
                         </div>
@@ -733,7 +734,7 @@
                     </p>
                     <br>
                     <h5>Haftungsausschluss:</h5>
-                    <h6 >Haftung für Inhalte</h6 >
+                    <h6>Haftung für Inhalte</h6>
                     <p>
                         Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
                     </p>
@@ -925,7 +926,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Ihre Nachricht wurde gesendet</p>
+                    <p>Ihre Nachricht wurde erfolgreich gesendet</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
@@ -944,8 +945,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Etwas ist schief gegangen</p>
-                    <p>Bitte versuchen Sie es später noch einmal.</p>
+                    <p>Etwas ist schief gelaufen.</p>
+                    <p>Bitte versuchen Sie es später erneut.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
@@ -975,14 +976,6 @@
     <script src="js/plugins.js"></script>
 
     <!--contact js-->
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW"></script>
-    <script>
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW', {action: 'homepage'}).then(function(token) {
-            ...
-            });
-        });
-    </script>
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.form.js"></script>
