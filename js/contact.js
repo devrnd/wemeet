@@ -59,11 +59,11 @@ $(document).ready(function(){
                 grecaptcha.ready(function () {
                     grecaptcha.execute('6Lc1I80UAAAAAPqlUIiP8XOaqkSwTHugAke_uDGW', { action: 'send_email' }).then(function (token) {
                         // add token to form
-                        let form = $(form)
+                        let form = $('form')
                         form.prepend('<input type="hidden" name="g-recaptcha-response" value="' + token + '">');
                         form.ajaxSubmit({
                             type:"POST",
-                            data: $('form').serialize(),
+                            data: form.serialize(),
                             url:"contact_process.php",
                             success: function() {
                                 $('#contactForm :input').attr('disabled', 'disabled');
