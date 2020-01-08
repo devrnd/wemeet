@@ -54,3 +54,7 @@ html {
 .captcha-info a {
     color: #0181F5;
 }
+
+.button{
+    cursor: pointer;
+}
