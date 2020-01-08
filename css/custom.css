@@ -41,3 +41,16 @@ html {
 .header-area .main-header-area .logo-img a:hover {
     color: #0181F5;
 }
+
+.grecaptcha-badge { 
+    visibility: hidden;
+}
+
+.captcha-info{
+    /* color: #aaa */
+    opacity: .6;
+}
+
+.captcha-info a {
+    color: #0181F5;
+}
