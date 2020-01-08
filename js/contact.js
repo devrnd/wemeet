@@ -39,7 +39,7 @@ $(document).ready(function(){
                     minlength: "Ihr Name muss aus mindestens 2 Zeichen bestehen"
                 },
                 subject: {
-                    required: "Komm schon, du hast ein Thema, nicht wahr?",
+                    required: "Bitte geben Sie einen Betreff ein",
                     minlength: "Ihr Betreff muss aus mindestens 4 Zeichen bestehen"
                 },
                 number: {
@@ -47,12 +47,12 @@ $(document).ready(function(){
                     minlength: "Ihre Nummer muss aus mindestens 5 Zeichen bestehen"
                 },
                 email: {
-                    required: "Keine E-Mail, keine Nachricht",
+                    required: "Bitte geben Sie die E-Mail Adresse ein",
                     email: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
                 },
                 message: {
-                    required: "ähm ... ja, Sie müssen etwas schreiben, um dieses Formular zu senden.",
-                    minlength: "das ist alles? Ja wirklich?"
+                    required: "Geben Sie Ihre Nachricht ein",
+                    minlength: "Ihre Eingabe ist zu kurz"
                 }
             },
             submitHandler: function(form) {
