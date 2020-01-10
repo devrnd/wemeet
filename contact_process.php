@@ -24,13 +24,13 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
 
 		$subject = "Sie haben eine Nachricht von Ihrer Webseite ({$name})";
 
-		$logo = 'img/logo.png';
-		$link = '#';
+		// $logo = 'img/logo.png';
+		// $link = '#';
 
 		$body = "<!DOCTYPE html><html lang='de'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
 		$body .= "<table style='width: 100%;'>";
 		$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-		$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
+		// $body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
 		$body .= "</td></tr></thead><tbody><tr>";
 		$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
 		$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
