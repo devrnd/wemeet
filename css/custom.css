@@ -58,3 +58,10 @@ html {
 .button{
     cursor: pointer;
 }
+
+.photo-avatar{
+    height: 60vh;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: top;
+}
