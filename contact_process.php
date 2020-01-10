@@ -22,7 +22,7 @@ if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
-		$subject = "Sie haben eine Nachricht von Ihrer Webseite.";
+		$subject = "Sie haben eine Nachricht von Ihrer Webseite ({$name})";
 
 		$logo = 'img/logo.png';
 		$link = '#';
