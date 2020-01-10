@@ -26,7 +26,7 @@
      <meta name="twitter:title" content="Nikola Schütte | Fachärztin für Allgemeinmedizin und Naturheilkunde Iris Lockhart (Angestellte Ärztin) FÄ f. Allgemeinmedizin und Akupunktur" />
      <meta name="twitter:description" content="Nikola Schütte Fachärztin für Allgemeinmedizin und Naturheilkunde Iris Lockhart (Angestellte Ärztin) Fachärztin für Allgemeinmedizin und Akupunktur" />
      <meta name="twitter:image" content="https://hausarzt-praxis-koeln.de/img/banner/banner_256.jpg" />
-     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="402433d6-8079-4b21-853c-7912788a91af" type="text/javascript" data-blockingmode="auto"></script>
+     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1114f928-1c2d-4f6c-81ed-ad018203b53f" data-blockingmode="auto" type="text/javascript"></script>
      <!-- CSS here -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -702,15 +702,14 @@
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> Alle Rechte vorbehalten | <a href="https://hausarzt-praxis-koeln.de/" target="_blank">Nikola Schütte</a>
+                            Copyright &copy;<span id="copyrightYear">2020</span>
+                            Alle Rechte vorbehalten | <a href="https://hausarzt-praxis-koeln.de/" target="_blank">Nikola Schütte</a>
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="402433d6-8079-4b21-853c-7912788a91af" type="text/javascript" async></script>
     </footer>
     <!-- footer_end -->
 
@@ -925,6 +924,8 @@
                         weitere Informationen in den Datenschutzbestimmungen von Google:
                         https://policies.google.com/privacy/partners?hl=de
                     </p>
+
+                    <script id="CookieDeclaration" src="https://consent.cookiebot.com/1114f928-1c2d-4f6c-81ed-ad018203b53f/cd.js" type="text/javascript" async></script>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Schließen</button>
@@ -1001,6 +1002,10 @@
 
     <script src="js/main.js"></script>
 
+    <script>
+        var year = new Date().getFullYear();
+        $('#copyrightYear').text(year);
+    </script>
 </body>
 
 </html>
