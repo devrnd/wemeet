@@ -65,3 +65,27 @@ html {
     object-fit: cover;
     object-position: top;
 }
+
+.hover_overlay{
+    background-color: #ed2b6d88 !important;
+}
+
+.about-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1rem;
+    padding-bottom: 6rem;
+}
+.about-table>div{
+    padding-bottom: .5rem;
+}
+.about-table>div:nth-child(odd){
+    font-weight: 600;
+}
+
+
+.about-popup .section-title{
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-bottom: 1rem;
+}
