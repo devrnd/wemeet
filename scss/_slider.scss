@@ -1,5 +1,5 @@
 .slider_bg_1{
-    background-image: url(../img/banner/banner_1.png);
+    background-image: url(../img/backgrounds/background_1.png);
 }
 .slider_area{
     background-size: cover;
@@ -45,7 +45,7 @@
             }
             &:after{
                 position: absolute;
-                background-image: url(../img/banner/path2.png);
+                background-image: url(../img/backgrounds/path2.png);
                 content: "";
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -71,7 +71,7 @@
         }
         &::before{
             position: absolute;
-            background-image: url(../img/banner/path.png);
+            background-image: url(../img/backgrounds/path.png);
             content: "";
             background-repeat: no-repeat;
             background-size: contain;
